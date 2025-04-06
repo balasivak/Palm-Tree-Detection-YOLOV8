@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Results</title>
+</head>
+<body>
+    <h1>Detected {{ count }} Palms</h1>
+    <div style="display: flex;">
+        <div style="margin-right: 20px;">
+            <h3>Original Image</h3>
+            <img src="{{ original }}" width="500">
+        </div>
+        <div>
+            <h3>Detection Results</h3>
+            <img src="{{ result }}" width="500">
+        </div>
+    </div>
+    <a href="/">Upload Another Image</a>
+</body>
+</html>
