@@ -34,10 +34,4 @@ User (Web Upload via Flask) │ ▼ Flask Server (app.py) │ ├── Accepts 
 
 ---
 
-## Installation
 
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/yourusername/palm-tree-detection.git
-cd palm-tree-detection
