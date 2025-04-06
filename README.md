@@ -32,36 +32,27 @@ User (Web Upload via Flask) │ ▼ Flask Server (app.py) │ ├── Accepts 
   - Slight rotations
   - Mask augmentation for dense tree regions
 
-##Model Accuracy & Performance
+## 📊 Model Accuracy & Performance
+
 This project uses a custom-trained YOLOv8 model for detecting palm trees in aerial imagery. The model was trained on a Roboflow-labeled dataset with advanced augmentations and tuned hyperparameters to optimize detection performance for palm clusters in various environments.
 
-Training Details
-Model: YOLOv8s (small variant for a balance of speed and accuracy)
+### Training Details
 
-Dataset Source: Roboflow (Aerial Palm Tree Dataset)
+- **Model**: YOLOv8s (small variant for a balance of speed and accuracy)
+- **Dataset Source**: Roboflow (Aerial Palm Tree Dataset)
+- **Image Size**: 512 × 512
+- **Epochs**: 20
+- **Batch Size**: 6 (optimized for 4GB GPU)
+- **Optimizer**: AdamW
+- **Augmentations**:
+  - Horizontal Flip
+  - HSV (Hue, Saturation, Value) shifts
+  - Small rotation (up to ±7 degrees)
+  - MixUp and Copy-Paste
+  - Perspective adjustment
+- **Training Framework**: Ultralytics YOLOv8
 
-Image Size: 512 × 512
+### Evaluation Results
 
-Epochs: 20
-
-Batch Size: 6 (optimized for 4GB GPU)
-
-Optimizer: AdamW
-
-Augmentations:
-
-Horizontal Flip
-
-HSV (Hue, Saturation, Value) shifts
-
-Small rotation (up to ±7 degrees)
-
-MixUp and Copy-Paste
-
-Perspective adjustment
-
-Training Framework: Ultralytics YOLOv8
-
-Evaluation Results
-After training, the model achieved an accuracy of 89%, validated using a held-out test set and visual inspection of bounding boxes.
+After training, the model achieved an **accuracy of 89%**, validated using a held-out test set and visual inspection of bounding boxes.
 
