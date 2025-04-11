@@ -41,7 +41,7 @@ This project uses a custom-trained YOLOv8 model for detecting palm trees in aeri
 - **Model**: YOLOv8s (small variant for a balance of speed and accuracy)
 - **Dataset Source**: Roboflow (Aerial Palm Tree Dataset)
 - **Image Size**: 512 × 512
-- **Epochs**: 20
+- **Epochs**: 20+40
 - **Batch Size**: 6 (optimized for 4GB GPU)
 - **Optimizer**: AdamW
 - **Augmentations**:
